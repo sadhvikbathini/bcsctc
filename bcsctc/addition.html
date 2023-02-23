@@ -1,0 +1,131 @@
+<html>
+<title>Data Addition</title>
+<link rel= 'icon' href= 'http://localhost:8080/bcsctc/Images/ku-college-logo.png' type= 'image/x-icon'>
+<body style='background-color:#f5f5f5'>
+<center>
+<img alt='KUCET' src='http://localhost:8080/bcsctc/Images/image-preview.jpg' style='height:118px; width:889px' />
+<h2><u>Data Addition</u></h2><br>
+<form method='post'>
+<table style='float:center;'>
+<tr>
+<td><strong>No. : </strong></td>
+<td><input type='text' name='no'/></td>
+<td><strong>&nbsp;&nbsp;Date of Addmision : </strong></td>
+<td><input type='text' placeholder= 'DD-MM-YYYY' name='admdate'/></td>
+</tr>
+<tr>
+<td><strong>Roll Number : </strong></td>
+<td><input type='text' name='rollno'/></td>
+<td><strong>&nbsp;&nbsp;Course : </strong></td>
+<td><input type='radio' name='course'/>B.Tech
+    <input type='radio' name='course'/>M.Tech</td>
+<td><strong>&nbsp;&nbsp;Branch : </strong></td>
+<td><select name='branch' id='branchno'/>
+    <option value='6'>Computer Science and Engineering</option>
+    <option value='5'>Information Technology</option>
+    <option value='4'>Electrical and Electronics Engineering</option>
+    <option value='3'>Electronics & Communication</option>
+    <option value='2'>Mechanical Engineering</option>
+    <option value='1'>Civil Engineering</option>
+    </select></td>
+<td><strong>&nbsp;&nbsp;Year of Study : </strong></td>
+<td><input type='text' placeholder='YYYY-YYYY' name='yos'/></td>
+</tr>
+<tr>
+<td><strong>Name : </strong></td>
+<td><input type='text' name='name'/></td>
+<td><strong>&nbsp;&nbsp;Father Name : </strong></td>
+<td><input type='text' name='fname'/></td>
+<td><strong>&nbsp;&nbsp;MotherName: </strong></td>
+<td><input type='text' name='mname'/></td>
+</tr>
+<tr>
+<td><strong>Date of Birth : </strong></td>
+<td><input type='text' placeholder='DD-MM-YYYY' name='dob'/></td>
+<td><strong>&nbsp;&nbsp;Place of birth : </strong></td>
+<td><input type='text' name='pob'/></td>
+<td><strong>&nbsp;&nbsp;Unknown No : </strong></td>
+<td><input type='text' name='uno'/></td>
+</tr>
+<tr>
+<td><strong>Caste : </strong></td>
+<td><input type='text' name='caste'/></td>
+<td><strong> &nbsp;&nbsp;SubCaste : </strong></td>
+<td><input type='text' name='subcaste'/></td>
+<td><strong>&nbsp; Annual Income: </strong></td>
+<td><input type='text' name='income'/></td>
+<td><strong> Eamcet Rank : </strong></td>
+<td><input type='text' name='rank'/></td>
+</tr>
+<tr>
+<td><strong>Caste No. : </strong></td>
+<td><input type='text' name='casteno'/></td>
+</tr>
+<tr>
+<td><strong>Address : </strong></td>
+<td><textarea rows='5' name='address'></textarea></td>
+<td><strong>Phone No. : </strong></td>
+<td><input type='text' name='phone1'/></td>
+<td><strong> &nbsp;&nbsp;Mobile No. : </strong></td>
+<td><input type='text' name='phone2'/></td>
+<td><strong>Email : </strong></td>
+<td><input type='text' name='email'/></td>
+</tr>
+<tr>
+<td><strong>Identification Marks : </strong></td>
+<td><input type='text' name='idmarks'/></td>
+</tr>
+</table>
+<p style='float:left'><strong>Particulars of the qualifying exam : </strong></p>
+<br><br><br>
+<table style='float:left'>
+<tr>
+<td><strong>Qualifying Exam : </strong></td>
+<td><input type='text' name='qexam'/></td>
+</tr>
+<tr>
+<td><strong>Regd. No. : </strong></td>
+<td><input type='text' name='regdno'/></td>
+</tr>
+<tr>
+<td><strong>Month & Year of Pass : </strong></td>
+<td><input type='text' name='myop'/></td>
+</tr>
+<tr>
+<td><strong>Marks Secured(%) : </strong></td>
+<td><input type='text' name='marks'/></td>
+</tr>
+<tr>
+<td><strong>College Name : </strong></td>
+<td><input type='text' name='college'/></td>
+</tr>
+<tr>
+<td><strong>TC No./Date : </strong></td>
+<td><input type='text' name='tcdate'/></td>
+</tr>
+</table>
+<br><br><br><br><br><br><br><br><br><br><br>
+<input type='submit' value='Add to DB' formaction='Insert'/> 
+<input type='submit' value='Cancel' formaction='#'/>
+</form>
+<br><br>
+<style>
+.footer {
+  position: fixed;
+  font-size:8px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:#ededed;
+  color: black;
+  text-align: center;
+}
+</style>
+
+<div class='footer'>
+  <p>Copyright 2023 &copy; Developed by Team Kaboom</p>
+</div>
+
+</center>
+</body>
+</html>
