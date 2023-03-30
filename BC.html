@@ -1,0 +1,68 @@
+<html>
+<title>Bonafide Certificate</title>
+<link rel= "icon" href= "/bcsctc/Images/logo.png" type= "image/x-icon">
+<body style="background-color:#f5f5f5">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<form action="PrintBC" method="post">
+<center>
+<a href='/bcsctc'><img alt='LOGO' src='/bcsctc/Images/image-preview.jpg' style='max-width:100%;height:auto;' /></a>
+</center>
+<br>
+<p style='text-align:right'><strong>Date : </strong><input type="text" placeholder='DD-MM-YYYY' name="date" /></p>
+<br>
+<p><strong>No.</strong> : <input type="text" name="no" />
+<br><br>
+<p><strong>Payment Details</strong> : <input type="text" name="tranno" />&nbsp; &nbsp;
+<strong>Date</strong> : <input type="text" placeholder='DD-MM-YYYY' name="trandate" /></p>
+<p><strong>Amount</strong> : <input type="text" name="amount" /></p>
+
+<center><u><strong>BONAFIDE CERTIFICATE</strong></u></center><p style="line-height: 25px;">
+This is to certify that Mr./Ms. <strong><input type="text" oninput='this.value = this.value.toUpperCase()' name="name" /></strong> S/o.D/o <strong>
+<input type="text" oninput='this.value = this.value.toUpperCase()' name="fname" />&nbsp;</strong>bearing Roll Number : <strong>
+<input type="text" oninput='this.value = this.value.toUpperCase()' name="rollno" /> </strong>is/was a bonafide student of <strong>this college during the academic year 
+<input type="text" placeholder="YYYY-YYYY" name="acyear" /></strong> studying/studied <strong>
+<select name='course' id='courseno'/>
+<option value='B.Tech'>B.Tech</option>
+<option value='M.Tech'>M.Tech</option>
+</select>
+<select name='year' id='yearno'/>
+<option value='IV'>IV</option>
+<option value='III'>III</option>
+<option value='II'>II</option>
+<option value='I'>I</option>
+</select> - Year 
+<select name='sem' id='semno'/>
+<option value='II'>II</option>
+<option value='I'>I</option>
+</select>
+- Semester </strong> with <strong>
+<select name='branch' id='branchno'/>
+<option value='null'> Select Branch </option>
+<option value='COMPUTER SCIENCE AND ENGINEERING'>Computer Science and Engineering</option>
+<option value='DATA SCIENCE'>Data Science</option>
+<option value='ARTIFICIAL INTELLIGENCE & MACHINE LEARNING'>Artificial Intelligence & Machine Learning</option>
+<option value='INFORMATION TECHNOLOGY'>Information Technology</option>
+<option value='ELECTRICAL & ELECTRONICS ENGINEERING'>Electrical & Electronics Engineering</option>
+<option value='ELECTRONICS & COMMUNICATION ENGINEERING'>Electronics & Communication Engineering</option>
+<option value='MECHANICAL ENGINEERING'>Mechanical Engineering</option>
+<option value='CIVIL ENGINEERING'>Civil Engineering</option>
+</select>
+</strong> branch.</p>
+<center>
+<br><br>
+<br><br>
+<strong>Clerk&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Supdt.&nbsp; &nbsp; &nbsp;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; A.R/D.R&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;PRINCIPAL</strong>
+<br><br><br><br>
+<input type="submit" value="Generate & Print" />
+<input type='button' value='Back' onclick='history.go(-1)'>
+</center>
+</form>
+
+</body>
+</html>

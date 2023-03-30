@@ -1,0 +1,270 @@
+<html>
+<title>Data Addition</title>
+<link rel= 'icon' href= '/bcsctc/Images/logo.png' type= 'image/x-icon'>
+<body style='background-color:#f5f5f5'>
+<center>
+<a href='/bcsctc'><img alt='LOGO' src='/bcsctc/Images/image-preview.jpg' style='max-width:100%;height:auto;' /></a>
+<h2><u>Data Addition</u></h2><br>
+<form method='post'>
+<table style='float:center;'>
+<tr>
+<td><strong>No. : </strong></td>
+<td><input type='text' maxlength="5" name='no'/></td>
+<!--</tr>-->
+<!--<tr>-->
+<td><strong>Date of Joining : </strong></td>
+<!--learn regex, pattern="^(0[1-9]|[12][0-9]|3[01])[- /.]"-->
+<td><input type='text' title="Write in DD-MM-YYYY Pattern Only" maxlength="10" placeholder= 'DD-MM-YYYY' name='admdate'/></td>
+<td><strong>Fee Reimbursement : </strong></td>
+<td>
+<select name='feereim' id='feereimno'/>
+<!--maxlength="4"-->
+<option value='null'>Select Fee Reimbursement</option>
+<option value='YES'>YES</option>
+<option value='GOV'>GOV</option>
+<option value='NO'>NO</option>
+</select>
+</td>
+<!--<td><strong>Fee Paid : </strong></td>-->
+<!--<td><input type='text' maxlength="7" name='feepaid'/></td>-->
+<!--<td><strong>Fee Processing Status: </strong></td>-->
+<!--<td>-->
+<!--<select name='feeproc' id='feeprocno'/>-->
+<!--<!--maxlength="4"-->
+<!--<option value='NO'>NO</option>-->
+<!--<option value='DUE'>DUE</option>-->
+<!--<option value='PAID'>PAID</option>-->
+<!--</select>-->
+<!--</td>-->
+</tr>
+<tr>
+<td><strong>Roll Number : </strong></td>
+<td><input type='text' placeholder='Enter Roll Number' title="Enter Roll Number" oninput='this.value = this.value.toUpperCase()' maxlength="10" name='rollno'/></td>
+<!--maxlength="12"-->
+<td><strong>Course : </strong></td>
+<td><select name='course' id='courseno'/>
+    <option value='B.TECH'>B.Tech</option>
+    <option value='M.TECH'>M.Tech</option>
+    </select></td>
+<!--maxlength="6"-->
+<td><strong>Branch : </strong></td>
+<td><select name='branch' id='branchno'/>
+    <option value='null'> Select Branch </option>
+    <option value='COMPUTER SCIENCE AND ENGINEERING'>Computer Science and Engineering</option>
+    <option value='DATA SCIENCE'>Data Science</option>
+    <option value='ARTIFICIAL INTELLIGENCE & MACHINE LEARNING'>Artificial Intelligence & Machine Learning</option>
+    <option value='INFORMATION TECHNOLOGY'>Information Technology</option>
+    <option value='ELECTRICAL & ELECTRONICS ENGINEERING'>Electrical & Electronics Engineering</option>
+    <option value='ELECTRONICS & COMMUNICATION ENGINEERING'>Electronics & Communication Engineering</option>
+    <option value='MECHANICAL ENGINEERING'>Mechanical Engineering</option>
+    <option value='CIVIL ENGINEERING'>Civil Engineering</option>
+    </select></td>
+<!--maxlength="50"-->
+<td><strong>Year of Study : </strong></td>
+<td>
+<select name='yos' id='yearRangeSelect'>
+  <option value='null'>Select Year</option>
+</select>
+
+<script>
+  const select = document.getElementById('yearRangeSelect');
+  for (let year = 2009; year <= 2109;year += 1) {
+    const yearRange = `${year}-${year + 4}`;
+    const option = document.createElement('option');
+    option.value = yearRange;
+    option.text = yearRange;
+    select.add(option);
+  }
+</script>
+</td>
+<!--maxlength="9"-->
+</tr>
+<tr>
+<td><strong>Name : </strong></td>
+<td><input type='text' placeholder='Enter Name' oninput='this.value = this.value.toUpperCase()' maxlength="50" name='name'/></td>
+<td><strong>Father Name: </strong></td>
+<td><input type='text' placeholder='Enter Fathers Name' oninput='this.value = this.value.toUpperCase()' maxlength="50" name='fname'/></td>
+<td><strong>Mother Name: </strong></td>
+<td><input type='text' placeholder='Enter Mothers Name' oninput='this.value = this.value.toUpperCase()' maxlength="50" name='mname'/></td>
+</tr>
+<tr>
+<td><strong>Date of Birth : </strong></td>
+<td><input type='text' title="Write in DD-MM-YYYY Pattern Only" maxlength="10" placeholder='DD-MM-YYYY' name='dob'/></td>
+<td><strong>Place of birth: </strong></td>
+<td><input type='text' title="Village or City or Town" placeholder='Enter Place of Birth' oninput='this.value = this.value.toUpperCase()' maxlength="30" name='pob'/></td>
+<td><strong>Aadhar No : </strong></td>
+<td><input type='text' title="12 or 16 Digits Aadhar Number" placeholder='Enter Aadhar Number' maxlength="16" name='aadharno'/></td>
+<td><strong>Gender : </strong></td>
+<td>
+<select name='gen' id='genno'/>
+<option value='null'>Select Gender</option>
+<option value='MALE'>Male</option>
+<option value='FEMALE'>Female</option>
+</select>
+<!--maxlength="6"-->
+</td>
+</tr>
+<tr>
+<td><strong>Caste : </strong></td>
+<td>
+<select name='caste' id='castenon'/>
+<option value='null'> Select Caste</option>
+<option value='OC'>OC</option>
+<option value='BC-A'>BC-A</option>
+<option value='BC-B'>BC-B</option>
+<option value='BC-C'>BC-C</option>
+<option value='BC-D'>BC-D</option>
+<option value='BC-E'>BC-E</option>
+<option value='SC'>SC</option>
+<option value='ST'>ST</option>
+</select>
+</td>
+<!--maxlength="4"-->
+<td><strong>SubCaste : </strong></td>
+<td><input type='text' placeholder='Enter SubCaste' oninput='this.value = this.value.toUpperCase()' maxlength="30" name='subcaste'/></td>
+<td><strong>Annual Income: </strong></td>
+<td><input type='text' placeholder='Enter Annual Income' maxlength="12" name='income'/></td>
+<td><strong>Rank : </strong></td>
+<td><input type='text' placeholder='Enter Rank' maxlength="7" name='rnk'/></td>
+</tr>
+<tr>
+<td><strong>Caste Sl.No.: </strong></td>
+<td><input type='text' placeholder='Enter Caste Serial Number' placeholder='Enter Mothers Name' maxlength="5" name='casteno'/></td>
+</tr>
+<tr>
+<td><strong>Address : </strong></td>
+<td><textarea rows='5' placeholder='Enter Full Address   . . .' maxlength="300" name='address'></textarea></td>
+<td><strong>Student's <br>Mobile No. : </strong></td>
+<td><input type='text' placeholder='XXXXXXXXXX' maxlength="10" name='phone1'/></td>
+<td><strong>Guardian's <br>Mobile No. : </strong></td>
+<td><input type='text' placeholder='XXXXXXXXXX' maxlength="13" name='phone2'/></td>
+<td><strong>Email : </strong></td>
+<td><input type='text' placeholder='Enter Email Address' maxlength="50" name='email'/></td>
+</tr>
+</table>
+<table style='float:left;'>
+<tr>
+<td><strong>Identification Marks : </strong></td>
+<td><input type='text' placeholder='Enter One Identification Mark' oninput='this.value = this.value.toUpperCase()' size='40' maxlength="150" name='idmarks'/></td>
+</tr>
+<!--<tr>-->
+<!--<td><strong> </strong></td>-->
+<!--<td><input type='text' name='idmarks1'/></td>-->
+<!--</tr>-->
+</table>
+<br><br><br>
+<table>
+<tr>
+<td><strong>Particulars of the qualifying exam : </strong></td>
+</tr>
+<tr>
+<td><strong>Qualifying Exam : </strong></td>
+<td><input type='text' maxlength="50" placeholder='Qualifying Exam' name='qexam'/></td>
+<td></td>
+<td><strong>Certificates Submitted : </strong></td>
+</tr>
+<tr>
+<td><strong>Regd. No. : </strong></td>
+<td><input type='text' maxlength="15" placeholder='Registration Number' name='regdno'/></td>
+<td></td>
+<td><strong>10th Standard </strong></td>
+<td>
+<select name='ssc' id='sscno'/>
+<option value='No'>No</option>
+<option value='Yes'>Yes</option>
+</select>
+</td>
+</tr>
+<tr>
+<td><strong>Month & Year of Pass : </strong></td>
+<td><input type='text' maxlength="7" placeholder='MM-YYYY' name='myop'/></td>
+<td></td>
+<td><strong>Previous year's Originals </strong></td>
+<td>
+<select name='inter' id='interno'/>
+<option value='No'>No</option>
+<option value='Yes'>Yes</option>
+</select>
+</td>
+</tr>
+<tr>
+<td><strong>Marks Secured(%) : </strong></td>
+<td><input type='text' maxlength="6" placeholder='Marks Secured(%)' name='marks'/></td>
+<td></td>
+<td><strong>Previous year's TC </strong></td>
+<td>
+<select name='itc' id='tcno'/>
+<option value='No'>No</option>
+<option value='Yes'>Yes</option>
+</select>
+</td>
+</tr>
+<tr>
+<td><strong>College Name : </strong></td>
+<td><input type='text' maxlength="50" placeholder='Enter College Name' name='college'/></td>
+<td></td>
+<td><strong>Photos </strong></td>
+<td>
+<select name='photos' id='photosno'/>
+<option value='No'>No</option>
+<option value='Yes'>Yes</option>
+</select>
+</tr>
+<tr>
+<td><strong>TC No./Date : </strong></td>
+<td><input type='text' maxlength="10"  placeholder='TC No.' name='tempitcno'/></td>
+<td>/ <input type='text' maxlength="10" placeholder='DD-MM-YYYY' name='tempitcdate'/></td>
+</tr>
+</table>
+<br><br>
+<table>
+<tr>
+<th>Transfer Certificate Issued on </th>
+<th>&nbsp;&nbsp;&nbsp;&nbsp;Bonafide Certificate Issued on </th>
+<th>&nbsp;&nbsp;&nbsp;&nbsp;Conduct Certificate Issued on </th>
+<th>&nbsp;&nbsp;&nbsp;&nbsp;Migration Certificate Issued on </th>
+</tr>
+<tr>
+<!--<td><input type='text' placeholder='DD-MM-YYYY' name='tcdate'/></td>-->
+<th>null</th>
+<!--<td>&nbsp;&nbsp;&nbsp;&nbsp;<input type='text' placeholder='DD-MM-YYYY' name='bcdate'/></td>-->
+<th>null</th>
+<!--<td>&nbsp;&nbsp;&nbsp;&nbsp;<input type='text' placeholder='DD-MM-YYYY' name='scdate'/></td>-->
+<th>null</th>
+<!--<td>&nbsp;&nbsp;&nbsp;&nbsp;<input type='text' placeholder='DD-MM-YYYY' name='mcdate'/></td>-->
+<th>null</th>
+</tr>
+</table>
+<br><br>
+<table>
+<tr>
+<td><strong>Remarks : </strong></td>
+<td><textarea rows='2' maxlength="300" placeholder='Enter Remarks or Some Important Notes . . .' cols='60' name='remarks'></textarea></td>
+</tr>
+</table>
+<br><br>
+<input type='submit' value='Add Student To Database' formaction='Insert'/>
+<input type='submit' value='Cancel' formaction='#'/>
+<input type='button' value='Back' onclick='history.go(-1)'>
+</form>
+<br><br>
+<style>
+.footer {
+  position: fixed;
+  font-size:8px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:#ededed;
+  color: black;
+  text-align: center;
+}
+</style>
+
+<div class='footer'>
+  <p>Copyright 2023 &copy; Developed by Team Kaboom</p>
+</div>
+
+</center>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<html>
+<title>Search</title>
+<link rel= "icon" href= "/bcsctc/Images/logo.png" type= "image/x-icon">
+<body style="background-color:#f5f5f5">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+.footer {
+  position: fixed;
+  font-size:9px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:#ededed;
+  color: black;
+  text-align: center;
+}
+</style>
+
+<center>
+<a href='/bcsctc'><img alt='LOGO' src='/bcsctc/Images/image-preview.jpg' style='max-width:100%;height:auto;' /></a>
+<br>
+<p style="text-align:right"><button onclick="window.location.href='/bcsctc/addition.html';">Add Students</button></p>
+</center>
+<iframe src='Count' style='border:none;' width='250' height='34'></iframe>
+<center>
+<br><br><br><br>
+<form method="post">
+  <em>Roll Number : </em> &nbsp;
+  <input type="text" oninput='this.value = this.value.toUpperCase()' id='myInput' placeholder='' size='15' name="rollno"/>
+
+<script>
+ var texts = ["1264567890", "1534567871", "1664567231","523554563","12346T1346"]; 
+ //only last 2 digits are team roll's
+     var myInput = document.getElementById("myInput");
+     var counter = 0;
+     setInterval(function () {
+       var currentText = texts[counter % texts.length];
+       myInput.placeholder = currentText;
+       counter++;
+     }, 100);
+</script>
+
+  <input type="submit" value="Get Details" formaction="Search"/><br><br>
+  <p style="line-height: 3px;">_______<br>_______</p>
+  <!--<input type="submit" value="Get Transfer Certificate" formaction="TC" />-->
+  <!--<input type="submit" value="Get Bonafide Certificate" formaction="BC" />-->
+  <!--<input type="submit" value="Get Study & Conduct Certificate" formaction="SC" />-->
+</form>
+<br><br>
+<form method='post'>
+<select name='course' id='courseno'/>
+<option value='null'>Select Course</option>
+<option value='B.TECH'>B.Tech</option>
+<option value='M.TECH'>M.Tech</option>
+</select>
+<select name='branch' id='branchno'/>
+<option value='null'> Select Branch </option>
+<option value='COMPUTER SCIENCE AND ENGINEERING'>Computer Science and Engineering</option>
+<option value='DATA SCIENCE'>Data Science</option>
+<option value='ARTIFICIAL INTELLIGENCE & MACHINE LEARNING'>Artificial Intelligence & Machine Learning</option>
+<option value='INFORMATION TECHNOLOGY'>Information Technology</option>
+<option value='ELECTRICAL & ELECTRONICS ENGINEERING'>Electrical & Electronics Engineering</option>
+<option value='ELECTRONICS & COMMUNICATION ENGINEERING'>Electronics & Communication Engineering</option>
+<option value='MECHANICAL ENGINEERING'>Mechanical Engineering</option>
+<option value='CIVIL ENGINEERING'>Civil Engineering</option>
+</select>
+
+<select name='yos' id='yearRangeSelect'>
+  <option value='null'>Select Year</option>
+</select>
+<script>
+  const select = document.getElementById('yearRangeSelect');
+  for (let year = 2009; year <= 2109;year += 1) {
+    const yearRange = `${year}-${year + 4}`;
+    const option = document.createElement('option');
+    option.value = yearRange;
+    option.text = yearRange;
+    select.add(option);
+  }
+</script>
+<select name='caste' id='castenon'/>
+<option value='null'> Select Caste</option>
+<option value='OC'>OC</option>
+<option value='BC-A'>BC-A</option>
+<option value='BC-B'>BC-B</option>
+<option value='BC-C'>BC-C</option>
+<option value='BC-D'>BC-D</option>
+<option value='BC-E'>BC-E</option>
+<option value='SC'>SC</option>
+<option value='ST'>ST</option>
+</select>
+<select name='gen' id='genno'/>
+<option value='null'>Select Gender</option>
+<option value='MALE'>Male</option>
+<option value='FEMALE'>Female</option>
+</select>
+<select name='feereim' id='feereimno'/>
+<option value='null'>Fee Reimbursement</option>
+<option value='YES'>YES</option>
+<option value='GOV'>GOV</option>
+<option value='NO'>NO</option>
+</select>
+<input type="submit" value="Filter Students" formaction="Filter"/>
+</form>
+<br><br>
+<p style="text-align:right;line-height: 9px;"><em><u>Custom Feilds</u></em><br><br>
+  <button onclick="window.location.href='/bcsctc/TC.html';">Transfer Certificate</button><br><br>
+  <button onclick="window.location.href='/bcsctc/BC.html';">Bonafide Certificate</button><br><br>
+  <button onclick="window.location.href='/bcsctc/SC.html';">Study & Conduct Certificate</button><br><br>
+  <button onclick="window.location.href='/bcsctc/MC.html';">Migration Certificate</button><br><br>
+</p>
+<br>
+<div class="footer">
+ <a href='/bcsctc/copyright.html' style='color:black;'><p>Copyright 2023 &copy; Developed by Team Kaboom</p></a>
+<!--text-decoration:none;-->
+</div>
+</center>
+</body>
+</html>

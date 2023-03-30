@@ -1,0 +1,156 @@
+<web-app>
+ <servlet>
+  <servlet-name>Search</servlet-name>
+  <servlet-class>Search</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>Search</servlet-name>
+  <url-pattern>/Search</url-pattern>
+ </servlet-mapping>
+
+ <servlet>
+  <servlet-name>Register</servlet-name>
+  <servlet-class>Register</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>Register</servlet-name>
+  <url-pattern>/Register</url-pattern>
+ </servlet-mapping>
+
+ <servlet>
+  <servlet-name>Insert</servlet-name>
+  <servlet-class>Insert</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>Insert</servlet-name>
+  <url-pattern>/Insert</url-pattern>
+ </servlet-mapping>
+
+ <servlet>
+  <servlet-name>Edit</servlet-name>
+  <servlet-class>Edit</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>Edit</servlet-name>
+  <url-pattern>/Edit</url-pattern>
+ </servlet-mapping>
+
+ <servlet>
+  <servlet-name>Update</servlet-name>
+  <servlet-class>Update</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>Update</servlet-name>
+  <url-pattern>/Update</url-pattern>
+ </servlet-mapping>
+
+ <servlet>
+  <servlet-name>Delete</servlet-name>
+  <servlet-class>Delete</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>Delete</servlet-name>
+  <url-pattern>/Delete</url-pattern>
+ </servlet-mapping>
+ 
+ <servlet>
+  <servlet-name>BC</servlet-name>
+  <servlet-class>BC</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>BC</servlet-name>
+  <url-pattern>/BC</url-pattern>
+ </servlet-mapping>
+
+ <servlet>
+  <servlet-name>PrintBC</servlet-name>
+  <servlet-class>PrintBC</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>PrintBC</servlet-name>
+  <url-pattern>/PrintBC</url-pattern>
+ </servlet-mapping>
+
+ <servlet>
+  <servlet-name>SC</servlet-name>
+  <servlet-class>SC</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>SC</servlet-name>
+  <url-pattern>/SC</url-pattern>
+ </servlet-mapping>
+
+ <servlet>
+  <servlet-name>PrintSC</servlet-name>
+  <servlet-class>PrintSC</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>PrintSC</servlet-name>
+  <url-pattern>/PrintSC</url-pattern>
+ </servlet-mapping>
+ 
+ <servlet>
+  <servlet-name>TC</servlet-name>
+  <servlet-class>TC</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>TC</servlet-name>
+  <url-pattern>/TC</url-pattern>
+ </servlet-mapping>
+
+ <servlet>
+  <servlet-name>PrintTC</servlet-name>
+  <servlet-class>PrintTC</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>PrintTC</servlet-name>
+  <url-pattern>/PrintTC</url-pattern>
+ </servlet-mapping>
+
+ <servlet>
+  <servlet-name>Count</servlet-name>
+  <servlet-class>Count</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>Count</servlet-name>
+  <url-pattern>/Count</url-pattern>
+ </servlet-mapping>
+
+ <servlet>
+  <servlet-name>Filter</servlet-name>
+  <servlet-class>Filter</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>Filter</servlet-name>
+  <url-pattern>/Filter</url-pattern>
+ </servlet-mapping>
+
+ <servlet>
+  <servlet-name>FilterEdit</servlet-name>
+  <servlet-class>FilterEdit</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>FilterEdit</servlet-name>
+  <url-pattern>/FilterEdit</url-pattern>
+ </servlet-mapping>
+
+ <servlet>
+  <servlet-name>FilterUpdate</servlet-name>
+  <servlet-class>FilterUpdate</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>FilterUpdate</servlet-name>
+  <url-pattern>/FilterUpdate</url-pattern>
+ </servlet-mapping>
+
+ <servlet>
+  <servlet-name>PrintFilter</servlet-name>
+  <servlet-class>PrintFilter</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>PrintFilter</servlet-name>
+  <url-pattern>/PrintFilter</url-pattern>
+ </servlet-mapping>
+
+</web-app>
+

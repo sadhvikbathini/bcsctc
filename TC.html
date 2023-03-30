@@ -1,0 +1,72 @@
+<html>
+<title>Transfer Certificate</title>
+<link rel= "icon" href= "/bcsctc/Images/logo.png" type= "image/x-icon">
+<body style="background-color:#f5f5f5">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<form action="PrintTC" method="post">
+<center>
+<a href='/bcsctc'><img alt='LOGO' src='/bcsctc/Images/image-preview.jpg' style='max-width:100%;height:auto;' /></a>
+<p><u><strong>TRANSFER CERTIFICATE</strong></u></p><br>
+<p style='text-align:'left'><strong>No. : </strong><input type="text" name="no" /></p>
+<p style='text-align:right'><strong>Date : </strong><input type="text" placeholder='DD-MM-YYYY' name="date" /></p><br>
+<table><tr>
+<td><strong>Challan No.  </strong></td>
+<td> : <input type='text' name='cno'/></td></tr><tr>
+<td><strong>Registration No. </strong></td>
+<td> : <input type='text' oninput='this.value = this.value.toUpperCase()' name='rollno'/></td></tr><tr>
+<td><strong>Name of the Student  </strong></td>
+<td> : <input type='text' oninput='this.value = this.value.toUpperCase()' name='name'/></td></tr><tr>
+<td><strong>Fathers Name  </strong></td>
+<td> : <input type='text' oninput='this.value = this.value.toUpperCase()' name='fname'/></td></tr><tr>
+<td><strong>Nationality  </strong></td>
+<td> : <input type='text' value='' name='nation'/></td></tr><tr>
+<td><strong>Category  </strong></td>
+<td> : <input type='text' name='caste'/></td></tr><tr>
+<td><strong>Date of Birth  </strong></td>
+<td> : <input type='text'  placeholder='DD-MM-YYYY' name='dob'/></td></tr><tr>
+<td><strong>Month&Year of Course Completion  </strong></td>
+<td> : <input type='text' placeholder='MM-YYYY' name='mycc'/></td></tr><tr>
+<td><strong>Date of Leaving  </strong></td>
+<td> : <input type='text' placeholder='DD-MM-YYYY' name='dol'/></td></tr><tr>
+<td><strong>Course  </strong></td>
+<td> :
+<select name='course' id='courseno'/>
+<option value='B.TECH'>B.Tech</option>
+<option value='M.TECH'>M.Tech</option>
+</select>
+<!--</td><td>-->
+(
+<select name='branch' id='branchno'/>
+<option value='null'> Select Branch </option>
+<option value='COMPUTER SCIENCE AND ENGINEERING'>Computer Science and Engineering</option>
+<option value='DATA SCIENCE'>Data Science</option>
+<option value='ARTIFICIAL INTELLIGENCE & MACHINE LEARNING'>Artificial Intelligence & Machine Learning</option>
+<option value='INFORMATION TECHNOLOGY'>Information Technology</option>
+<option value='ELECTRICAL & ELECTRONICS ENGINEERING'>Electrical & Electronics Engineering</option>
+<option value='ELECTRONICS & COMMUNICATION ENGINEERING'>Electronics & Communication Engineering</option>
+<option value='MECHANICAL ENGINEERING'>Mechanical Engineering</option>
+<option value='CIVIL ENGINEERING'>Civil Engineering</option>
+</select>
+) </td></tr><tr>
+<td><strong>Conduct  </strong></td>
+<td> : <input type='text' value='Satisfactory' name='conduct'/></td></tr><tr>
+<td><strong>Identification Marks  </strong></td>
+<td> : <input type='text' oninput='this.value = this.value.toUpperCase()' name='idmarks'/></td></tr>
+</table>
+<br><br>
+<br><br>
+<strong>Clerk&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Supdt.&nbsp; &nbsp; &nbsp;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; A.R/D.R&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;PRINCIPAL</strong>
+<br><br><br><br>
+<input type="submit" value="Generate & Print" />
+<input type='button' value='Back' onclick='history.go(-1)'>
+</center>
+</form>
+
+</body>
+</html>
