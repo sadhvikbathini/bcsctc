@@ -9,8 +9,7 @@ protected void doGet(HttpServletRequest request , HttpServletResponse response) 
 response.setContentType("text/html");
 PrintWriter out = response.getWriter();
 try{
- Class.forName("com.mysql.jdbc.Driver");
- Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/oshp","root","pass");
+ Connection con = DBUtil.getConnection();
  Statement st = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_UPDATABLE);
  ResultSet rs = st.executeQuery("select count(rollno) from student;");
  rs.first();

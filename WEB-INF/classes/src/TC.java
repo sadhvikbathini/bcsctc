@@ -15,8 +15,7 @@ String rollno= request.getParameter("rollno");
 String dupli = request.getParameter("dupli");
 
 try{
- Class.forName("com.mysql.jdbc.Driver");
- Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/oshp","root","pass");
+ Connection con = DBUtil.getConnection();
  PreparedStatement ps=con.prepareStatement("select * from student where rollno=?;");
  ps.setString(1,rollno);
  ResultSet rs = ps.executeQuery();
@@ -57,6 +56,8 @@ try{
  out.println("<td><input type='text' value='"+rs.getString(13)+"' name='caste'/></td></tr><tr>");
  out.println("<td><strong>Date of Birth : </strong></td>");
  out.println("<td><input type='text' value='"+rs.getString(10)+"' placeholder='DD-MM-YYYY' name='dob'/></td></tr><tr>");
+ out.println("<td><strong>Date of Admission</strong></td>");
+ out.println("<td> : <input type='text' placeholder='DD-MM-YYYY' value='"+rs.getString(3)+"' name='admdate'/></td></tr><tr>");
  out.println("<td><strong>Month&Year of Course Completion : </strong></td>");
  out.println("<td><input type='text' placeholder='MM-YYYY' name='mycc'/></td></tr><tr>");
  out.println("<td><strong>Date of Leaving : </strong></td>");

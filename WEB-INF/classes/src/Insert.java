@@ -52,8 +52,7 @@ String itc = request.getParameter("itc");
 String photos = request.getParameter("photos");
 
 try{
- Class.forName("com.mysql.jdbc.Driver");
- Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/oshp","root","password");
+ Connection con = DBUtil.getConnection();
  PreparedStatement ps=con.prepareStatement("INSERT INTO student(rollno,no,admdate,course,branch,yos,name,fname,mname,dob,pob,aadharno,caste,subcaste,income,rnk,casteno,address,phone1,phone2,email,idmarks,qexam, regdno,myop,marks,college,itcdate,remarks,feereim,gen,ssc,inter,itc,photos) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ");
  ps.setString(1,rollno);
  ps.setString(2,no);
