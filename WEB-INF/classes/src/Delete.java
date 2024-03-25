@@ -10,8 +10,7 @@ response.setContentType("text/html");
 PrintWriter out = response.getWriter();
 String rollno= request.getParameter("rollno");
 try{
- Class.forName("com.mysql.jdbc.Driver");
- Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/oshp","root","pass");
+ Connection con = DBUtil.getConnection();
  PreparedStatement ps=con.prepareStatement("delete from student where rollno=?;");
  ps.setString(1,rollno);
  int status = ps.executeUpdate();

@@ -72,8 +72,7 @@ String branch= request.getParameter("branch");
  out.println("</center></div></body>");
  
   try{
-  Class.forName("com.mysql.jdbc.Driver");
-  Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/oshp","root","pass");
+  Connection con = DBUtil.getConnection();
     PreparedStatement pps=con.prepareStatement("select scdate from student where rollno=?;");
 	  pps.setString(1,rollno);
 	  ResultSet rs = pps.executeQuery();

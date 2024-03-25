@@ -19,9 +19,7 @@ String gen = request.getParameter("gen");
 String vals= request.getParameter("val");
 
 try{
-  Class.forName("com.mysql.jdbc.Driver");
-  Connection con;
-  con = DriverManager.getConnection("jdbc:mysql://localhost:3306/oshp","root","pass");
+  Connection con = DBUtil.getConnection();
 
   out.println("<html><title>Student Details</title>");
    out.println("<link rel= 'icon' href= '/bcsctc/Images/logo.png' type= 'image/x-icon'>");

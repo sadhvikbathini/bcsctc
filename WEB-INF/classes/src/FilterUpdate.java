@@ -21,8 +21,7 @@ int val= Integer.parseInt(vals);
 
 
 try{
- Class.forName("com.mysql.jdbc.Driver");
- Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/oshp","root","pass");
+ Connection con = DBUtil.getConnection();
 int status=0;
 for(int i=1;i<count+1;i++){
 		if (val==1){

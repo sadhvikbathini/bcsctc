@@ -14,8 +14,7 @@ String date= LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
 String rollno= request.getParameter("rollno");
 
 try{
- Class.forName("com.mysql.jdbc.Driver");
- Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/oshp","root","pass");
+ Connection con = DBUtil.getConnection();
  PreparedStatement ps=con.prepareStatement("select * from student where rollno=?;");
  ps.setString(1,rollno);
  ResultSet rs = ps.executeQuery();

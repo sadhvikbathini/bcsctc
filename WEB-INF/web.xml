@@ -117,6 +117,15 @@
  </servlet-mapping>
 
  <servlet>
+  <servlet-name>Ip</servlet-name>
+  <servlet-class>Ip</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>Ip</servlet-name>
+  <url-pattern>/Ip</url-pattern>
+ </servlet-mapping>
+
+ <servlet>
   <servlet-name>Filter</servlet-name>
   <servlet-class>Filter</servlet-class>
  </servlet>

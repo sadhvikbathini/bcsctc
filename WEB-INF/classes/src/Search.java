@@ -12,8 +12,7 @@ response.setContentType("text/html");
 PrintWriter out = response.getWriter();
 String rollno= request.getParameter("rollno");
 try{
- Class.forName("com.mysql.jdbc.Driver");
- Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/oshp","root","password");
+  Connection con = DBUtil.getConnection();
  //Statement st = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_UPDATABLE);
  PreparedStatement ps=con.prepareStatement("select * from student where rollno=?;");
  ps.setString(1,rollno);
